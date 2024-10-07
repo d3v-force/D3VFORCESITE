@@ -359,7 +359,19 @@
 
 @media screen and (max-width: 480px) {
    
+    .login .btn {
+        background-color: white;
+        font-weight: bolder;
+        color: #002266; 
+        padding: 0.2rem 0.5rem;
+    }
     
+    .icon img {
+        height: 15px; 
+        width: auto;
+        margin-right: auto;
+        background-color: none ;
+    }
     .navbar .menubar ul {
         display: none;
     }
@@ -401,14 +413,10 @@
         text-align: left;
         padding: 0.2rem 0;
     }
-
     
     .icon {
         flex-grow: 1;
     }
-
-    /*...*/
-
 
     .join-us-btn {
         font-size: 0.9rem;
@@ -429,8 +437,8 @@
     }
 
     .call-to-action {
-        height: auto;
-        padding: 25rem 2rem;
+        height: 75vh;
+        padding: 15rem 2rem;
         background-color: #ffffff;
         text-align: center;
         align-items: center;
