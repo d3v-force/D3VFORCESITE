@@ -1,3 +1,4 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +7,6 @@
     
 }
 
-/*Preloader*/
-
 /* Preloader full screen background */
 #preloader {
     position: fixed;
@@ -15,38 +14,33 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff; /* White background */
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Make sure it stays on top of everything else */
+    z-index: 9999;
 }
 
-/* Preloader logo animation */
 .preloader-logo {
-    width: 150px; /* Initial size of the logo */
+    width: 150px;
     animation: pulse 1.5s ease-in-out infinite;
 }
 
-/* Keyframe animation for logo bloating effect */
 @keyframes pulse {
     0% {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.2); /* Grow a bit */
+        transform: scale(1.2);
     }
     100% {
-        transform: scale(1); /* Back to original size */
+        transform: scale(1);
     }
 }
 
-/*preloader ends*/
-
-
 .main{
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.4)50%, rgba(0,0,0,0.4)50%), url(images/landing.png);
+    background: linear-gradient(to top, rgba(0,0,0,0.4)50%, rgba(0,0,0,0.4)50%), url();
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -138,30 +132,31 @@
     color: white; 
 }
 
+
+/* Call to Action Section */
 .call-to-action {
-    align-items: center;
-    height: 80vh;
-    width: 100%;
-    padding: 10rem 2rem;
+    height: auto;
+    padding: 20rem 2rem;
     background-color: #ffffff;
     text-align: center;
+    align-items: center;
 }
 
 .call-to-action h2 {
-    font-size: 7rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     color: #002266;
     font-weight: bold;
 }
 
 .call-to-action p {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: bold;
     margin-bottom: 2rem;
 }
 
 .join-us-btn {
-    font-size: 2rem;
+    font-size: 1.2rem;
     background-color: #002266;
     color: #fff;              
     padding: 10px 30px;       
@@ -175,8 +170,7 @@
 .join-us-btn:hover{
     background-color: black;
 }
-
-/* footer */
+/* Footer */
 
 .footer {
     background-color: #001025;
@@ -243,10 +237,32 @@
 
 .footer-bottom {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
     font-size: 1rem;
     border-top: 0.1rem solid #585858;
     padding-top: 10px;
+}
+
+@media (max-width: 1200px) {
+    .menubar ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menubar ul li {
+        margin: auto 0.5rem; 
+    }
+
+
+    .menubar ul li a {
+        text-decoration: none;
+        font-size: 0.8rem;
+        color: #fff;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
 }
 
 /* General Mobile-first approach */
@@ -293,5 +309,149 @@
         width: 100%;
         text-align: left;
         padding: 0.5rem 0;
+    }
+
+    
+    .icon {
+        flex-grow: 1;
+    }
+
+    .call-to-action {
+        height: auto;
+        padding: 25rem 2rem;
+        background-color: #ffffff;
+        text-align: center;
+        align-items: center;
+    }
+
+    .join-us-btn {
+        font-size: 0.9rem;
+        background-color: #002266;
+        color: #fff;              
+        padding: 10px 30px;       
+        border: none;              
+        border-radius: 10px;        
+        cursor: pointer;          
+        font-weight: bold;
+        transition: background-color 0.3s ease; 
+    }
+
+
+    /* Footer - centralize content */
+    .footer-container {
+        flex-direction: row;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .footer .footer-left{
+        text-align: center;
+        align-items: center;
+        margin: 0 auto 2rem auto;
+    }
+
+    .footer .footer-right{
+        text-align: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+   
+    
+    .navbar .menubar ul {
+        display: none;
+    }
+
+    .navbar .menubar.active ul {
+        display: block;
+        position: fixed;
+        top: 100%;
+        right: 0;
+        background: rgba(0, 0, 102, 0.9);
+        width: auto;
+        text-align: right;
+    }
+
+    .navbar ul li {
+        margin-bottom: 10px;
+    }
+
+
+
+    /* Navbar adjustments for mobile */
+    .navbar .navcontent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    .menubar ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .menubar ul li {
+        width: 100%;
+        text-align: left;
+        padding: 0.2rem 0;
+    }
+
+    
+    .icon {
+        flex-grow: 1;
+    }
+
+    /*...*/
+
+
+    .join-us-btn {
+        font-size: 0.9rem;
+        background-color: #002266;
+        color: #fff;              
+        padding: 10px 30px;       
+        border: none;              
+        border-radius: 10px;        
+        cursor: pointer;          
+        font-weight: bold;
+        transition: background-color 0.3s ease; 
+    }
+
+    .call-to-action h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .call-to-action {
+        height: auto;
+        padding: 25rem 2rem;
+        background-color: #ffffff;
+        text-align: center;
+        align-items: center;
+    }
+
+    /* Footer - centralize content */
+    .footer-container {
+        flex-direction: row;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .footer .footer-left{
+        text-align: center;
+        align-items: center;
+        margin: 0 auto 1rem auto;
+    }
+
+    .footer .footer-right{
+        text-align: center;
+        align-items: center;
+        margin: 0 auto;
     }
 }
