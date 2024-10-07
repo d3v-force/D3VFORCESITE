@@ -1,4 +1,4 @@
-/* Resett */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -864,6 +864,23 @@
 }
 
 @media screen and (max-width: 480px) {
+
+    .login .btn {
+        background-color: white;
+        font-weight: bolder;
+        color: #002266; 
+        padding: 0.2rem 0.5rem;
+    }
+    
+    .icon img {
+        height: 15px; 
+        width: auto;
+        margin-right: auto;
+        background-color: none ;
+    }
+
+
+
     .team-members {
         grid-template-columns: 1fr; /* 1 column on very small screens */
     }
@@ -887,6 +904,8 @@
         margin-bottom: 10px;
     }
 
+
+
     /* Navbar adjustments for mobile */
     .navbar .navcontent {
         display: flex;
@@ -894,6 +913,7 @@
         align-items: center;
         width: 100%;
     }
+
 
     .menubar ul {
         flex-direction: column;
@@ -915,8 +935,8 @@
 
     /* Hero Section - centralize content */
     .hero {
-        height: 80vh;
-        padding: 2rem;
+        height: auto;
+        padding: 3rem;
     }
 
     .hero h1 {
@@ -926,6 +946,7 @@
 
     .hero p {
         font-size: 1rem;
+        text-align: justify;
     }
 
     /* Who We Are section - centralize content and adjust layout */
@@ -943,10 +964,11 @@
         margin:auto;
         max-width: 100%;
         height: auto;
+        padding: 1.2rem 1.2rem;
     }
 
     .item {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.1rem;
     }
     
     .item strong {
@@ -1033,6 +1055,12 @@
 
     /* Our Team section - stack team members vertically */
 
+    .our-team-container {
+        margin: auto;
+        width: 100%;
+        align-items: center;
+    }
+
     .our-team h2 {
         font-size: 2rem;
         margin-bottom: 0.5rem;
@@ -1043,7 +1071,17 @@
         grid-template-columns: repeat(1, 1fr); /* 2 columns on smaller screens */
     }
 
-    /*...*/
+    .member img {
+        width: 100%;             
+        height: auto;    
+        border-radius: 10px;
+        object-fit: cover;  
+        border-bottom: 2px solid #f2f2f2;
+    }
+
+
+    /*...
+    */
 
     .call-to-action img {
         width: 40%;
@@ -1075,14 +1113,12 @@
     }
 
     .footer .footer-left{
-        text-align: center;
-        align-items: center;
+        text-align: left;
         margin: 0 auto 1rem auto;
     }
 
     .footer .footer-right{
-        text-align: center;
-        align-items: center;
+        text-align: left;
         margin: 0 auto;
     }
 }
