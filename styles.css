@@ -344,7 +344,7 @@
 
 .card p {
     font-size: 1rem;         
-    color: #666;           
+    color: #000000;           
     margin-bottom: 20px;    
     padding: 0 1px;       
 }
@@ -398,8 +398,7 @@
 /* Flex container to align title and cards */
 .why-join-us-container {
     max-width: 80%;
-    display: flex;
-    align-items: center;
+    display: block;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 auto; 
@@ -473,16 +472,17 @@
 }
 
 /* Our Team Section */
+
 .our-team {
     height: auto;
     padding: 5rem;
     text-align: center;
-    background-color:#039fdd2a ;
+    background-color:#039fdd2a;
 }
 
-.our-team-container{
+.our-team-container {
     margin: auto;
-    max-width: 80%;
+    max-width: 100%;
     align-items: center;
 }
 
@@ -493,14 +493,15 @@
 }
 
 .our-team-container .title {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-weight: bold;
 }
 
 .team-members {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+    gap: 1rem;
+    justify-items: center;
 }
 
 .member {
@@ -509,7 +510,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     width: 200px;
-    margin-bottom: 1rem;
     text-align: left;
 }
 
@@ -540,9 +540,10 @@
     transition: background-color 0.3s ease; 
 }
 
-.view-btn:hover{
+.view-btn:hover {
     background-color: #0045ad;
 }
+
 
 /* Call to Action Section */
 .call-to-action {
@@ -708,11 +709,12 @@
 
     /* Hero Section - centralize content */
     .hero {
-        height: 100vh;
+        height: 80vh;
         padding: 2rem;
     }
 
     .hero h1 {
+        margin-top: 100px;
         font-size: 2rem;
     }
 
@@ -725,17 +727,79 @@
         flex-direction: column;
     }
 
-    .floating-box {
-        margin: 2rem auto;
-        max-width: 100%;
+    .who-we-are h2{
+        font-size: 3rem;
     }
+
+   
+
+    .floating-box {
+        margin:auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .item {
+        margin-bottom: 0.5rem;
+    }
+    
+    .item strong {
+        display: block; 
+        font-size: 1.0rem;
+        font-weight: bolder;
+        margin-bottom: 0.1rem;
+    }
+
 
     /* What We Do - make cards stacked in a column */
     .cards-container {
         flex-direction: column;
         align-items: center;
     }
+    .what-we-do h2{
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 0.2rem;
+        text-align: left;
+        color: #002266;
+    }
 
+    .what-we-do-container2 p {
+        font-size: 0.8rem;
+        max-width: 600px;
+        margin-bottom: 2rem;
+    }
+
+    .card {
+        background-color: #fff;  
+        border-radius: 16px;     
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        text-align: left;      
+        padding: 1rem;
+        overflow: hidden;  
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        max-width: 300px;
+        height: auto;       
+    }
+
+    .card img {
+        width: 100%;             
+        height: 100px;    
+    }
+
+    .card h3 {
+        font-size: 1.0rem;  
+    }
+
+    .card p {
+        font-size: 0.8rem;              
+    }
+
+    /* --- */
+    
+    .who-we-are p{
+        font-size: 0.8rem;
+    }
 
     .card {
         width: 100%;
@@ -743,6 +807,14 @@
     }
 
     /* Why Join Us - make the cards in a column */
+
+    .why-join-us h2 {
+        font-size: 3rem;
+        position: static; 
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
     .why-join-us-cards {
         flex-direction: column;
         align-items: center;
@@ -754,28 +826,21 @@
     }
 
     /* Our Team section - stack team members vertically */
+
+    .our-team h2 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+        color: #002266;
+    }
+    
     .team-members {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
     }
 
-    .member {
+    /*...*/
+
+    .call-to-action img {
         width: 60%;
-        margin-bottom: 2rem;
-    }
-
-    .member img {
-        height: auto;
-    }
-
-    .call-to-action-container {
-        padding: 2rem;
-        text-align: center;
-    }
-
-    .call-to-action-container img{
-        width: 80%;
-        height: auto;
     }
 
     /* Footer - centralize content */
@@ -789,6 +854,230 @@
         text-align: center;
         align-items: center;
         margin: 0 auto 2rem auto;
+    }
+
+    .footer .footer-right{
+        text-align: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .team-members {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+
+    
+    .navbar .menubar ul {
+        display: none;
+    }
+
+    .navbar .menubar.active ul {
+        display: block;
+        position: fixed;
+        top: 100%;
+        right: 0;
+        background: rgba(0, 0, 102, 0.9);
+        width: auto;
+        text-align: right;
+    }
+
+    .navbar ul li {
+        margin-bottom: 10px;
+    }
+
+    /* Navbar adjustments for mobile */
+    .navbar .navcontent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menubar ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .menubar ul li {
+        width: 100%;
+        text-align: left;
+        padding: 0.2rem 0;
+    }
+
+    
+    .icon {
+        flex-grow: 1;
+    }
+
+    /* Hero Section - centralize content */
+    .hero {
+        height: 80vh;
+        padding: 2rem;
+    }
+
+    .hero h1 {
+        margin-top: 100px;
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Who We Are section - centralize content and adjust layout */
+    .who-we-are-container {
+        flex-direction: column;
+    }
+
+    .who-we-are h2{
+        font-size: 2.5rem;
+    }
+
+   
+
+    .floating-box {
+        margin:auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .item {
+        margin-bottom: 0.5rem;
+    }
+    
+    .item strong {
+        display: block; 
+        font-size: 1.0rem;
+        font-weight: bolder;
+        margin-bottom: 0.1rem;
+    }
+
+
+    /* What We Do - make cards stacked in a column */
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .what-we-do h2{
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 0.2rem;
+        text-align: left;
+        color: #002266;
+    }
+
+    .what-we-do-container2 p {
+        font-size: 0.8rem;
+        max-width: 600px;
+        margin-bottom: 2rem;
+    }
+
+    .card {
+        background-color: #fff;  
+        border-radius: 16px;     
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        text-align: left;      
+        padding: 1rem;
+        overflow: hidden;  
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        max-width: 300px;
+        height: auto;       
+    }
+
+    .card img {
+        width: 100%;             
+        height: 100px;    
+    }
+
+    .card h3 {
+        font-size: 1.0rem;  
+    }
+
+    .card p {
+        font-size: 0.8rem;              
+    }
+
+    /* --- */
+    
+    .who-we-are p{
+        font-size: 0.8rem;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    /* Why Join Us - make the cards in a column */
+
+    .why-join-us h2 {
+        font-size: 2rem;
+        position: static; 
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+    .why-join-us-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .why-card {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    /* Our Team section - stack team members vertically */
+
+    .our-team h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: #002266;
+    }
+    
+    .team-members {
+        grid-template-columns: repeat(1, 1fr); /* 2 columns on smaller screens */
+    }
+
+    /*...*/
+
+    .call-to-action img {
+        width: 40%;
+    }
+
+    .join-us-btn {
+        font-size: 0.9rem;
+        background-color: #002266;
+        color: #fff;              
+        padding: 10px 30px;       
+        border: none;              
+        border-radius: 10px;        
+        cursor: pointer;          
+        font-weight: bold;
+        transition: background-color 0.3s ease; 
+    }
+
+    .call-to-action h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+
+    /* Footer - centralize content */
+    .footer-container {
+        flex-direction: row;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .footer .footer-left{
+        text-align: center;
+        align-items: center;
+        margin: 0 auto 1rem auto;
     }
 
     .footer .footer-right{
