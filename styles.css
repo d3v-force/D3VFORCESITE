@@ -165,9 +165,10 @@
         background-color: #ff6600;
         font-weight: bolder;
         color: #ffffff; 
-        padding: 1rem 2.5rem;
+        padding: 1rem 2.0rem;
         border-radius: 10px;
         cursor: pointer;
+        margin-top: 1rem;
         border: none;
         transition: background-color 0.3s ease, color 0.3s ease;
     }
@@ -553,8 +554,14 @@
     padding: 4rem 2rem;
     background-color: #ffffff;
     text-align: center;
+    align-items: center;
 }
 
+.call-to-action-container{
+    align-items: center;
+    max-width: 80%;
+    margin: auto;
+}
 .call-to-action h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -967,9 +974,9 @@
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 0.8rem;
         text-align: justify;
-        line-height: 0.8rem;
+        line-height: 1.5rem;
     }
 
     /* Who We Are section - centralize content and adjust layout */
