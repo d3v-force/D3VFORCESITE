@@ -13,6 +13,7 @@
     <div id="preloader">
         <img src="images/preloader.png" alt="Logo" class="preloader-logo">
     </div>
+    
     <div class="main">
         <div class="navbar">
             <div class="navcontent">
@@ -21,36 +22,36 @@
                 </div>
                 <div class="menubar">
                     <ul>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Our Team</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="inprogress.html">Services</a></li>
+                        <li><a href="inprogress.html">Our Team</a></li>
+                        <li><a href="inprogress.html">About</a></li>
+                        <li><a href="inprogress.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="login">
-                    <a href="#"><button class="btn">Sign In</button></a>
+                    <a href="inprogress.html"><button class="btn">Sign In</button></a>
                 </div>
             </div>
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
         </div>
 
+        
+        <!-- Call to Action Section -->
         <section class="call-to-action">
             <div class="call-to-action-container">
                 <h2>Oops!</h2>
-                <p>This page has not been built yet, we are hoping you bring this page to life.</p>
-                <button class="btn join-us-btn">Join Us!</button>
+                <p>The page you tried to access has not been built yet. We hope you join us and bring this to life.</p>
+                <a href="inprogress.html" target="_blank"><button class="join-us-btn">Join Us</button></a>
             </div>
         </section>
 
+        <!-- Footer Section -->
         <footer class="footer">
             <div class="footer-container">
                 <div class="footer-left">
                     <img src="images/weblogo.png" alt="d3vForce Logo" class="footer-logo">
                     <p class="footer-slogan">Join - Learn - Build</p>
                 </div>
-    
+        
                 <!-- Right side: Contact details and social icons -->
                 <div class="footer-right">
                     <h4>Contact Details:</h4>
@@ -67,7 +68,8 @@
                         <a href="https://telegram.org" target="_blank"><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>
-            </div>        
+            </div>
+        
             <!-- Bottom copyright section -->
             <div class="footer-bottom">
                 <p>&copy; 2024 d3vForce</p>
@@ -78,7 +80,7 @@
         // Sticky Navbar Background Change on Scroll
         window.addEventListener('scroll', function () {
             const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 100) {
+            if (window.scrollY > 20) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
@@ -86,12 +88,12 @@
         });
 
         window.addEventListener("load", function () {
-        // Wait for 2 seconds before hiding the preloader
         setTimeout(function () {
             const preloader = document.getElementById('preloader');
             preloader.style.display = 'none';
-        }, 2000); // 2000 milliseconds = 2 seconds
+        }, 2000);
     });
+
     </script>
 </body>
 </html>
