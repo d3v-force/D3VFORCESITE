@@ -132,24 +132,18 @@
     color: white; 
 }
 
-.call-to-action{
-    background-color: white;
-    align-items: center;
-    height: auto;
+.form-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 ratio */
 }
 
-.call-to-action-container{
-    margin: auto;
-    max-width: 50%;
-    margin-bottom: 5rem;
-}
-
-.call-to-action-container iframe{
-    margin:auto;
-    align-items: center;
-    margin-top: 10rem;
-    width:640px;
-    height:1600; 
+.form-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* Footer */
